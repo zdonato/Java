@@ -1,25 +1,31 @@
 public class Library{
+    // Initialize variables.
 	private Book[] Books = new Book[10];  
     private String address; 
     private int numBooks = 0; 
-        
+    
+    // Library constructor
     public Library(String libAddress){
     	address = libAddress; 
-    }
-        
+    } // End constructor.
+    
+    // Method to print the opening hours.
     static void printOpeningHours(){
         System.out.println("Libraries are open daily from 9am to 5pm."); 
-    }
-       
+    } // End printOpeningHours.
+    
+    // Method printAddress to print the address.
     void printAddress(){
         System.out.println(address); 
-    }
-        
+    } // End printAddres.
+    
+    // Method addBook to add Books to the Books array.
     void addBook(Book newBook){
         Books[numBooks] = newBook; 
         numBooks++;
-    }
-        
+    } // End addBook.
+    
+    // Method printAvailableBooks to print the books listed in the Books array.
     void printAvailableBooks(){
         if (Books[0] == null){
     	    System.out.println("No books in the catalog.");
@@ -36,8 +42,9 @@ public class Library{
               	}
        		}
       	}
-	}
-        
+	} // End printAvailableBooks.
+    
+    // Method borrowBook to borrow a book from the Library.
     void borrowBook(String title){
 		for (int k = 0; k < Books.length; k++){
 	   		if (Books[k] == null){
@@ -55,8 +62,9 @@ public class Library{
 	           	}
 	       	}
 		}
-    }
-
+    } // End borrowBook.
+    
+    // Method returnBook to return a borrowed book to the library.
 	void returnBook(String title){
 		for (int k = 0; k < Books.length; k++){
       		if (Books[k] == null) { 
@@ -69,7 +77,7 @@ public class Library{
                	break; 
            	}
     	}
-	}
+	} // End returnBook. 
 
     public static void main(String[] args) {
         // Create two libraries
