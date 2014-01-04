@@ -1,6 +1,6 @@
 public class Library{
     // Initialize variables.
-	private Book[] Books = new Book[10];  
+    private Book[] Books = new Book[10];  
     private String address; 
     private int numBooks = 0; 
     
@@ -30,19 +30,19 @@ public class Library{
         if (Books[0] == null){
     	    System.out.println("No books in the catalog.");
         } else {
-			for (int i=0; i<Books.length; i++){ 
-           		if (Books[i] == null){
-             		continue;
-               	} else {
-               		if (Books[i].isBorrowed() == false){
-                   		System.out.println(Books[i].getTitle()); 
-                   	} else {
-                   		continue; 
-                   	}
+	    for (int i=0; i<Books.length; i++){ 
+         	if (Books[i] == null){
+             	    continue;
+	  	} else {
+               	    if (Books[i].isBorrowed() == false){
+                       	System.out.println(Books[i].getTitle()); 
+                    } else {
+               		continue; 
+                    }
               	}
-       		}
+       	    }
       	}
-	} // End printAvailableBooks.
+    } // End printAvailableBooks.
     
     // Method borrowBook to borrow a book from the Library.
     void borrowBook(String title){
