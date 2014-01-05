@@ -1,83 +1,77 @@
+import java.util.ArrayList; 
+
 public class Library{
-    // Initialize variables.
-    private Book[] Books = new Book[10];  
+	private ArrayList<Book> Books = new ArrayList<Book>(); 
     private String address; 
     private int numBooks = 0; 
-    
-    // Library constructor
+        
     public Library(String libAddress){
     	address = libAddress; 
-    } // End constructor.
-    
-    // Method to print the opening hours.
+    }
+        
     static void printOpeningHours(){
         System.out.println("Libraries are open daily from 9am to 5pm."); 
-    } // End printOpeningHours.
-    
-    // Method printAddress to print the address.
+    }
+       
     void printAddress(){
         System.out.println(address); 
-    } // End printAddres.
-    
-    // Method addBook to add Books to the Books array.
+    }
+        
     void addBook(Book newBook){
-        Books[numBooks] = newBook; 
+        Books.add(newBook);  
         numBooks++;
-    } // End addBook.
-    
-    // Method printAvailableBooks to print the books listed in the Books array.
+    }
+        
     void printAvailableBooks(){
-        if (Books[0] == null){
+        if (Books.size() == 0){
     	    System.out.println("No books in the catalog.");
         } else {
-	    for (int i=0; i<Books.length; i++){ 
-         	if (Books[i] == null){
-             	    continue;
-	  	} else {
-               	    if (Books[i].isBorrowed() == false){
-                       	System.out.println(Books[i].getTitle()); 
-                    } else {
-               		continue; 
-                    }
+			for (int i=0; i<Books.size(); i++){ 
+           		if (Books.get(i) == null){
+             		continue;
+               	} else {
+               		if (Books.get(i).isBorrowed() == false){
+                   		System.out.println(Books.get(i).getTitle()); 
+                   	} else {
+                   		continue; 
+                   	}
               	}
-       	    }
+       		}
       	}
-    } // End printAvailableBooks.
-    
-    // Method borrowBook to borrow a book from the Library.
+	}
+        
     void borrowBook(String title){
-		for (int k = 0; k < Books.length; k++){
-	   		if (Books[k] == null){
+		for (int k = 0; k < Books.size(); k++){
+	   		if (Books.get(k) == null){
 	       		System.out.println("Sorry this book is not in our catalog."); 
 	           	break; 
 	      	}
-	       	if (Books[k].getTitle().equals(title)){
-	       		if (Books[k].isBorrowed() == true){
+	       	if (Books.get(k).getTitle().equals(title)){
+	       		if (Books.get(k).isBorrowed() == true){
 	           		System.out.println("Sorry this book is already borrowed.");
 	           		break; 
 	        	} else {
-	          		Books[k].Borrowed(); 
+	          		Books.get(k).Borrowed(); 
 	               	System.out.println("You successfully borrowed "+ title + "."); 
 	               	break; 
 	           	}
 	       	}
 		}
-    } // End borrowBook.
-    
-    // Method returnBook to return a borrowed book to the library.
+    }
+
 	void returnBook(String title){
-		for (int k = 0; k < Books.length; k++){
-      		if (Books[k] == null) { 
+		for (int k = 0; k < Books.size(); k++){
+      		if (Books.get(k) == null) { 
            		System.out.println("Sorry this book is not in our catalog."); 
                	break; 
            	}
-           	if (Books[k].getTitle().equals(title)){ 
-              	Books[k].Returned();
+           	if (Books.get(k).getTitle().equals(title)){ 
+              	Books.get(k).Returned();
                	System.out.println("You successfully returned " + title + ".");  
                	break; 
            	}
     	}
-	} // End returnBook. 
+	}
 
     public static void main(String[] args) {
         // Create two libraries
