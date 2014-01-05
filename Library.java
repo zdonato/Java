@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class Library{
 	private ArrayList<Book> Books = new ArrayList<Book>(); 
     private String address; 
-    private int numBooks = 0; 
         
     public Library(String libAddress){
     	address = libAddress; 
@@ -19,7 +18,6 @@ public class Library{
         
     void addBook(Book newBook){
         Books.add(newBook);  
-        numBooks++;
     }
         
     void printAvailableBooks(){
