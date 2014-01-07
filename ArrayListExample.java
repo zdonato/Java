@@ -7,10 +7,10 @@ class ArrayListExample{
 		ArrayList<String> strings = new ArrayList<String>(); 
 		
 		// Use .add(item) for adding elements. 
-		strings.add("SomeName"); 
-		strings.add("Blah"); 
-		strings.add("Foo"); 
-		strings.add("FooFoo"); 
+		strings.add("Zachary"); 
+		strings.add("Elizabeth"); 
+		strings.add("Kellie"); 
+		strings.add("Anthony"); 
 		
 		// Use .size() for the length of the ArrayList and .get(index) to get the value of the index. 
 		for (int i = 0; i < strings.size(); i++){

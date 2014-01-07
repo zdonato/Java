@@ -1,6 +1,6 @@
 public class Book{ 
-	String title; 
-	boolean borrowed; 
+	private String title; 
+	private boolean borrowed; 
 	
 	public Book(String bookTitle){ 
 		title = bookTitle; 
