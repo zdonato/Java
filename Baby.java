@@ -27,6 +27,7 @@ public class Baby {
 		Baby zach = new Baby("Zach", "Male", 7.6); 
 		zach.displayBaby();
 		zach.sayHi(); 
+		// Space class with .set method to add a new line. 
 		space.set(); 
 		Baby liz = new Baby("Liz", "Female", 6.5); 
 		liz.displayBaby(); 

@@ -26,5 +26,9 @@ public class Book{
 	public String getTitle(){ 
 		return title; 
 	} // End of getTitle().
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 906de008ca545d7c26e875b5c33606443dd5bda5
 }

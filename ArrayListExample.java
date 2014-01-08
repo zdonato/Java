@@ -7,10 +7,17 @@ class ArrayListExample{
 		ArrayList<String> strings = new ArrayList<String>(); 
 		
 		// Use .add(item) for adding elements. 
+<<<<<<< HEAD
 		strings.add("SomeName"); 
 		strings.add("Blah"); 
 		strings.add("Foo"); 
 		strings.add("FooFoo"); 
+=======
+		strings.add("Zachary"); 
+		strings.add("Elizabeth"); 
+		strings.add("Kellie"); 
+		strings.add("Anthony"); 
+>>>>>>> 906de008ca545d7c26e875b5c33606443dd5bda5
 		
 		// Use .size() for the length of the ArrayList and .get(index) to get the value of the index. 
 		for (int i = 0; i < strings.size(); i++){
@@ -27,7 +34,11 @@ class ArrayListExample{
 		
 		System.out.println(); 
 		// Use .remove(value) to remove that value from the ArrayList.
+<<<<<<< HEAD
 		strings.remove("FooFoo"); 
+=======
+		strings.remove("Kellie"); 
+>>>>>>> 906de008ca545d7c26e875b5c33606443dd5bda5
 		
 		// Alternative way to loop through ArrayList. 
 		for (String s : strings){
